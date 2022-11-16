@@ -14,7 +14,6 @@
             <artifactId>postgresql</artifactId>
             <version>42.5.0</version>
             <scope>runtime</scope>
-
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.hibernate/hibernate-entitymanager -->
         <dependency>
@@ -98,6 +97,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <mainClass>app.Application</mainClass>
+                </configuration>
             </plugin>
         </plugins>
     </build>
