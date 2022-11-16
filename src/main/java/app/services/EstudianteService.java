@@ -19,7 +19,7 @@ public class EstudianteService {
     }
 
     public List<EstudianteDto> orderByEdad(){
-        var result = estudianteRepository.orderByEdad();
+        List<EstudianteDto> result = estudianteRepository.orderByEdad();
         return result.stream().map( e -> new EstudianteDto(e.getNro_libreta(),e.getNombre(),e.getApellido(),e.getEdad(),e.getGenero(),e.getDni(),e.getCiudad_residencia())).collect(Collectors.toList());
     }
 
@@ -30,13 +30,13 @@ public class EstudianteService {
     }
 
     public List<EstudianteDto> getEstudiantesByGenero(String gender) {
-        var result = estudianteRepository.getEstudiantesByGenero(gender);
+        List<EstudianteDto> result = estudianteRepository.getEstudiantesByGenero(gender);
         return result.stream().map(e-> new EstudianteDto(e.getNro_libreta(),e.getNombre(),e.getApellido(),e.getEdad(),e.getGenero(),e.getDni(),e.getCiudad_residencia())).collect(Collectors.toList());
 
     }
 
     public List<EstudianteDto> getEstudiantesByCarreraOrderByCiudad(String career, String city) {
-        var result= estudianteRepository.getEstudiantesByCarreraOrderByCiudad(career,city);
+        List<EstudianteDto> result= estudianteRepository.getEstudiantesByCarreraOrderByCiudad(career,city);
         return result.stream().map(e-> new EstudianteDto(e.getNro_libreta(),e.getNombre(),e.getApellido(),e.getEdad(),e.getGenero(),e.getDni(),e.getCiudad_residencia())).collect(Collectors.toList());
     }
 
