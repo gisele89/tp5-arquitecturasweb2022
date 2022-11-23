@@ -4,12 +4,14 @@ import app.model.Carrera;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class MatriculaDto {
     @ApiModelProperty(notes = "Nombre de la carrera", name = "career",dataType = "String", value = "test career", example = "Tudai")
     Carrera carrera;

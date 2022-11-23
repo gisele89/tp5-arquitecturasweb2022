@@ -3,12 +3,14 @@ package app.dto;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 
 @Getter
 @Setter
 @AllArgsConstructor
+@NoArgsConstructor
 public class EstudianteDto {
     int nro_libreta;
     @ApiModelProperty(notes = "Nombre de la persona", name = "name",dataType = "String", value = "test name", example = "Juana")
